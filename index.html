@@ -1,0 +1,242 @@
+<html>
+  <head>
+    <title>MobileNet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <center>
+      <div class="col-xs-12 header_div">
+        <h2>
+          Case Study
+          <img src="logo.gif" />
+        </h2>
+           </center>
+      </div>
+      <ol>
+        <li>
+        <div class="col-xs-12 main_div">
+          <label>Test image- </label>
+          <div id="result">
+            <img style="width: inherit;" src="bottle.jpg">
+          </div>
+          
+        </div>
+        
+        <div id="result_in_models" style="border-radius: 20px; background-color: #d6bad3" class="btn">
+          <p>
+            Result on <span class="subtitle">Wolfram project</span> :
+            <span class="model_result">beverage</span>
+          </p>
+          <p>
+            Result on <span class="subtitle">MobileNet project</span> :
+            <span class="model_result">wardrobe, closet, press</span>
+          </p>
+
+        </div>
+        <p>Wolfram project is more accurate</p>
+      </li>
+      <li>
+        <div class="col-xs-12 main_div">
+          <label>Test image- </label>
+          <div id="result"><img style="width: inherit;" src="hp-laptop.jpg"></div>
+          
+        </div>
+      
+        <div id="result_in_models" style="border-radius: 20px; background-color: #d6bad3" class="btn">
+          <p>
+            Result on <span class="subtitle">Wolfram project</span> :
+            <span class="model_result">laptop</span>
+          </p>
+          <p>
+            Result on <span class="subtitle">MobileNet project</span> :
+            <span class="model_result">desktop computer</span>
+          </p>
+        </div>
+        <p>Wolfram project is more accurate</p>
+      </li>
+      <li>
+        <div class="col-xs-12 main_div">
+          <label>Test image- </label>
+          <div id="result"><img style="width: inherit;" src="clock.jpg"></div>
+          
+        </div>
+     
+        <div id="result_in_models" style="border-radius: 20px; background-color: #d6bad3" class="btn">
+          <p>
+            Result on <span class="subtitle">Wolfram project</span> :
+            <span class="model_result">analog clock</span>
+          </p>
+          <p>
+            Result on <span class="subtitle">MobileNet project</span> :
+            <span class="model_result">wall clock</span>
+          </p>
+        </div>
+        <p>Wolfram project is more accurate</p>
+      </li>
+      <li>
+        <div class="col-xs-12 main_div">
+          <label>Test image- </label>
+          <div id="result">
+            <img style="width: inherit; height: 290px;" src="chair.jpg">
+            <br><br>
+          </div>
+          
+          
+        </div>
+      
+        <div id="result_in_models" style="border-radius: 20px; background-color: #d6bad3" class="btn">
+          <p>
+            Result on <span class="subtitle">Wolfram project</span> :
+            <span class="model_result">settee</span>
+          </p>
+          <p>
+            Result on <span class="subtitle">MobileNet project</span> :
+            <span class="model_result">rocking chair, rocker</span>
+          </p>
+        </div>
+        <p>Wolfram project is more accurate</p>
+      </li>
+      <li>
+        <div class="col-xs-12 main_div">
+          <label>Test image- </label>
+          <div id="result"><img style="width: inherit;" src="computer-mouse.jpg"></div>
+          
+        </div>
+      
+        <div id="result_in_models" style="border-radius: 20px; background-color: #d6bad3" class="btn">
+          <p>
+            Result on <span class="subtitle">Wolfram project</span> :
+            <span class="model_result">computer mouse</span>
+          </p>
+          <p>
+            Result on <span class="subtitle">MobileNet project</span> :
+            <span class="model_result">mouse, computer mouse</span>
+          </p>
+        </div>
+        <p>Wolfram project is more accurate</p>
+      </li>
+      <li>
+        <div class="col-xs-12 main_div">
+          <label>Test image- </label>
+          <div id="result"><img style="width: inherit; height: 290px;" src="fresh-apple-500x500.jpg">
+        
+       
+      </div>
+          
+        </div>
+      
+        <div id="result_in_models" style="border-radius: 20px; background-color: #d6bad3" class="btn">
+          <p>
+            Result on <span class="subtitle">Wolfram project</span> :
+            <span class="model_result">Red Delicious</span>
+          </p>
+          <p>
+            Result on <span class="subtitle">MobileNet project</span> :
+            <span class="model_result">punching bag, punch bag, punching ball, punchball</span>
+          </p>
+        </div>
+        <p>Wolfram project is more accurate</p>
+      </li>
+      <li>
+        <div class="col-xs-12 main_div">
+          <label>Test image- </label>
+          <div id="result"><img style="width: inherit;" src="books_759.jpg"></div>
+         
+        </div>
+      
+        <div id="result_in_models" style="border-radius: 20px; background-color: #d6bad3" class="btn">
+          <p>
+            Result on <span class="subtitle">Wolfram project</span> :
+            <span class="model_result">book</span>
+          </p>
+          <p>
+            Result on <span class="subtitle">MobileNet project</span> :
+            <span class="model_result">screen, CRT screen</span>
+          </p>
+        </div>
+        <p>Wolfram project is more accurate</p>
+      </li>
+      <li>
+        <div class="col-xs-12 main_div">
+          <label>Test image- </label>
+          <div id="result"><img style="width: inherit; height: 290px;" src="orange.jpg"></div>
+          
+        </div>
+      
+        <div id="result_in_models" style="border-radius: 20px; background-color: #d6bad3" class="btn">
+          <p>
+            Result on <span class="subtitle">Wolfram project</span> :
+            <span class="model_result">clementine</span>
+          </p>
+          <p>
+            Result on <span class="subtitle">MobileNet project</span> :
+            <span class="model_result">maraca</span>
+          </p>
+        </div>
+        <p>Wolfram project is more accurate</p>
+      </li>
+      <li>
+        <div class="col-xs-12 main_div">
+          <label>Test image- </label>
+          <div id="result"><img style="width: inherit;" src="phone.jpg"></div>
+          
+        </div>
+      
+        <div id="result_in_models" style="border-radius: 20px; background-color: #d6bad3" class="btn">
+          <p>
+            Result on <span class="subtitle">Wolfram project</span> :
+            <span class="model_result">cellphone</span>
+          </p>
+          <p>
+            Result on <span class="subtitle">MobileNet project</span> :
+            <span class="model_result">television, television system</span>
+          </p>
+        </div>
+        <p>Wolfram project is more accurate</p>
+      </li>
+      <li>
+        <div class="col-xs-12 main_div">
+          <label>Test image- </label>
+          <div id="result"><img style="width: inherit; height: 290px;" src="pencil.jpg"></div>
+          
+        </div>
+      
+        <div id="result_in_models" style="border-radius: 20px; background-color: #d6bad3" class="btn">
+          <p>
+            Result on <span class="subtitle">Wolfram project</span> :
+            <span class="model_result">pencil</span>
+          </p>
+          <p>
+            Result on <span class="subtitle">MobileNet project</span> :
+            <span class="model_result">rubber eraser, rubber, pencil eraser</span>
+          </p>
+        </div>
+        <p>Wolfram project is more accurate</p>
+      </li>
+    </ol>
+    <div style="border-radius: 20px; background-color: #cccccc;" class="final_result btn">I have tested 10 images. Wolfram
+      project tested 10 correctly. But MobileNet tested none correctly. So, <b>Wolfram project is more accurate in this Case
+        Study</b></div>
+    <br><br><br><br>
+      
+  <div class="copyright_div">Developed by - Dikshha</div>
+    <script src="main.js"></script>
+  </body>
+</html>
